@@ -1,0 +1,18 @@
+<!--pages/component/bar/bar.wxml-->
+<view class='bar'>
+    <view class='select_box'>
+    <view class='select' catchtap='selectTap'>
+        <view class='select_text'>{{selectData[index]}}
+        <block>
+          <image  wx:if='{{show==false}}' class='select_img' src='/pages/icon/titlebar_pack_up.png'></image>
+           <image  wx:else='{{show==ture}}' class='rselect_img' src='/pages/icon/titlebar_pack_up.png'></image>
+        </block>
+        </view>    
+       
+      </view>
+      <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*80):0}}rpx;'>
+          <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+      </view>
+  </view>
+</view>
+<view class='box' style='height:{{show?auto:0}}rpx;'></view>

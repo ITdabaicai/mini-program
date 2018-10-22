@@ -1,0 +1,55 @@
+/* pages/choosefw/choosefw.wxss */
+
+
+.msg{
+  height: 116rpx;
+  background: #fff;
+  position: relative;
+}
+.isselect{
+  position: absolute;
+  top: 50rpx;
+  left: 30rpx;
+}
+.name{
+  position: absolute;
+  top: 50rpx;
+  left: 102rpx;
+  font-size: 30rpx;
+  color:#333333;
+}
+.record{
+  position: absolute;
+  top: 90rpx;
+  left: 186rpx;
+  font-size:22rpx;
+  color:#b1b5c7;
+}
+
+.sub{
+  margin-top: 60rpx;
+}
+.loginbtn{
+  width: 92%;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #00ce9f;
+  color: #fff;
+  font-size: 32rpx;
+}
+.line{
+  width: 80%;
+  height: 1px;
+  background: #b1b5c7;
+  position: absolute;
+  top:0rpx; 
+  margin-left:12%; 
+}
+
+.tipw{
+  text-align: center;
+  font-size: 24rpx;
+  color:#b1b5c7;
+  margin-top: 30rpx;
+
+}

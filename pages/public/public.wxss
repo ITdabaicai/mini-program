@@ -1,0 +1,58 @@
+/* pages/userpublic/userpublic.wxss */
+.cpmsg{
+  height: 85rpx;
+  padding-left:30rpx;
+  color:#333333;
+  font-size: 26rpx;
+  line-height: 85rpx;
+}
+.cptype{
+  height: 110rpx;
+  padding-left:30rpx;
+  font-size: 30rpx;
+  line-height: 110rpx;
+  background: #fff;
+  position: relative;
+  color:  #b1b5c7;
+}
+.list_more{
+  position: absolute;
+  top: 40rpx;
+  right: 30rpx;
+}
+.line{
+  width: 92%;
+  height: 1px;
+  background: #b1b5c7;
+  position: absolute;
+  bottom:0rpx; 
+}
+.picker{
+  color: #333333;
+}
+
+.sub{
+  margin-top: 60rpx;
+}
+.loginbtn{
+  width: 92%;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #00ce9f;
+  color: #fff;
+  font-size: 32rpx;
+}
+.sdfas {
+  width: 700rpx;
+  padding: 40rpx 0;
+}
+
+.textarea-wrp {
+  padding: 0 25rpx;
+  background-color: #fff;
+}
+
+.sdfd{
+   width: 700rpx;
+  padding: 25rpx 0;
+}

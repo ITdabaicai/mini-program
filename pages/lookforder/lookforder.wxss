@@ -1,0 +1,124 @@
+/* pages/handleform/handleform.wxss */
+
+.none-img{
+  position: absolute;
+  top: 150rpx;
+  left:265rpx;
+}
+.none-text{
+  position: absolute;
+  top: 375rpx;
+  left:265rpx;
+  font-size: 30rpx;
+  color:#b1b5c7;
+  text-align: center;
+  width: 200rpx;
+}
+
+
+
+/* orderform */
+.orderview{
+  width: 92%;
+  min-height: 350rpx;
+  background-color: #fff;
+  box-shadow: 0rpx 0rpx 10rpx rgba(0,0,0,0.2) ;
+  position: relative;
+  top: 30rpx;
+  left:30rpx;
+  margin-bottom:30rpx;
+  border-radius:4rpx;
+  }
+.ordertop,.orderfooter{
+  
+  position: relative;
+  display: block;
+  margin: 0 30rpx;
+}
+.usermsg{
+  position: relative;
+  display: block;
+  margin: 0 30rpx;
+  height: 140rpx;
+}
+.ordertop{
+  height: 80rpx;
+  width: 92%;
+}
+.orderstate{
+  position: absolute;
+  top:30rpx;
+  left: 0;
+  height: 25rpx;
+  font-size: 26rpx;
+}
+
+.orderfix{
+  position: absolute;
+  top:25rpx;
+  right: 0rpx;
+  width: 60rpx;
+  height: 40rpx;
+  border: #00ce9f 1px solid;
+  color: #00ce9f;
+  border-radius:4rpx;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 40rpx;
+}
+.orderbuy{
+  position: absolute;
+  top:25rpx;
+  right: 0rpx;
+  width: 60rpx;
+  height: 40rpx;
+  border: #6a7fdb 1px solid;
+  color: #6a7fdb;
+  border-radius:4rpx;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 40rpx;
+}
+
+
+.username, .usertel{
+  display: inline-block
+}
+.username{
+  margin-top: 30rpx;
+  height: 25rpx;
+  line-height: 25rpx;
+  margin-right:15rpx;
+  font-size: 26rpx;
+    color:#666666;
+}
+.usertel{
+  font-size: 26rpx;
+  color:#666666;
+}
+.useradd{
+  margin-top: 30rpx;
+  font-size:30rpx;
+  color:#333333;
+  font-weight: bold;
+ }
+.orderfooter{
+  border-top:1px solid #f2f2f2;
+  margin-top:30rpx;
+  height: 120rpx;
+  position: relative;
+  }
+.ordernum{
+  position: absolute;
+  top: 40rpx;
+  left: 0;
+  font-size:22rpx;
+  color:#999999;
+}
+.ordertime{
+  position: absolute;
+  top: 40rpx;
+  right: 30rpx;
+  font-size:22rpx;
+  color:#999999;
+}

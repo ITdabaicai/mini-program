@@ -1,0 +1,46 @@
+<!--pages/userpublic/userpublic.wxml-->
+<loading hidden="{{hidden}}">
+  加载中
+</loading>
+<view class='cpmsg'>
+  产品信息（必填）
+</view>
+
+<view class='cptype'>
+  <input placeholder='水泵类型' placeholder-style='color: #b1b5c7;'  bindinput="gettype" />
+</view>
+<view class='cpmsg'>
+ 
+  {{juese==7?'报修人信息（必填）':' 采购人信息（必填）'}}
+</view>
+
+<view class='cptype'>
+  <input placeholder='公司名称' placeholder-style='color: #b1b5c7;' bindinput="getBname" />
+  <view class='line'></view>
+</view>
+
+<view class='cptype'>
+  <input placeholder='联系人（请填写真实姓名）' maxlength='4' placeholder-style='color: #b1b5c7;' bindinput="getname" />
+  <view class='line'></view>
+</view>
+
+<view class='cptype'>
+  <input placeholder='手机号码' maxlength='11' type='number' placeholder-style='color: #b1b5c7;' bindinput="getphone"/>
+  <view class='line'></view>
+</view>
+
+<view class='cptype'>
+  <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <view class="picker">
+     {{region[0]}}，{{region[1]}}，{{region[2]}}
+    </view>
+  </picker>
+ <image class='list_more' src='/pages/icon/list_more.png' style='width:24rpx;height:24rpx;'></image>
+  <view class='line'></view>
+</view>
+  <view class="textarea-wrp">
+    <textarea class='sdfas'   placeholder='详细地址：如道路、门牌号、小区、楼栋号、单元室等' placeholder-style='color:#b1b5c7;font-size:30rpx;'  auto-height  bindinput="getadd"/>
+  </view>
+<view class='sub'>
+  <button class="loginbtn"  bindtap='sub'>{{juese==7?'提交保修':'提交报单'}}</button>
+</view>

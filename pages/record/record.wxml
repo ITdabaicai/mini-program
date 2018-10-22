@@ -1,0 +1,144 @@
+<!-- loading -->
+<loading hidden="{{hidden}}">
+  加载中
+</loading>
+<!-- bar -->
+<view class='bar'>
+    <view class='select_box'>
+    <view class='select' catchtap='selectTap'>
+        <block wx:if='{{show==false}}' >
+        <view class='select_text'style='color:#333333;'>{{selectData[index]}}
+          <image  class='select_img' src='/pages/icon/titlebar_pack_up.png'></image>
+         </view> 
+         </block>
+        <block wx:else='{{show==ture}}' >
+           <view class='select_text'>{{selectData[index]}}
+           <image class='select_img' src='/pages/icon/titlebar_drop_drown.png'></image>
+           </view> 
+        </block>
+         
+      </view>
+      <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*80):0}}rpx;'>
+      <block  wx:for='{{selectData}}' wx:key='{{index}}'>
+        <block wx:if='{{aindex==index}}'>
+          <view class='seloption'  wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}   
+         <image  class='select_tick' style='width:24rpx;height:24rpx;' src='/pages/icon/popup_tick.png'></image>    
+          </view>    
+          </block>
+           <block wx:else>
+              <view class='option'  wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}  
+                </view> 
+           </block> 
+       </block>  
+      </view>
+  </view>
+</view>
+<view class='box' style='height:{{show?auto:0}}rpx;'></view>
+
+
+<!-- nav -->
+<navbar tabs="{{tab}}"  sliderLeft='{{sliderLeft}}'  bind:myevent="onGetCode"  >
+</navbar>
+<!-- orderfrom -->
+      <view class="weui-tab__panel">
+          <view class="weui-tab__content"  hidden="{{activeIndex != 0}}">
+             <block wx:if="{{total!=0}}">
+            <view wx:for="{{time}}" class='orderview' data-ordernum='{{item.orderNo}}' data-ordertype='{{item.type}}'  bindtap="godetail">
+          <view class='ordertop' >
+            <view class='orderstate'>{{item.pstate==null?item.rstate:item.pstate}}</view>
+            <block wx:if='{{item.type!="购买"}}'>
+            <view class='orderfix'>{{item.type}}</view>
+            </block>
+            <block wx:else>
+              <view class='orderbuy'>{{item.type}}</view>
+            </block>
+          </view>
+          <view class='usermsg'>
+            <view class='username'>{{item.name}}</view>
+            <view class='usertel'>{{item.mobile}}</view>
+            <view class='useradd'>{{item.inthecity}}{{item.detailAddress}}</view>
+          </view>
+          <view class='orderfooter'>
+            <view class='ordernum'>报单号:{{item.orderNo}}</view>
+            <view class='ordertime'>{{item.crtTime}}</view>
+          </view> 
+      </view>   
+            </block>
+             <block wx:else>
+                    <view class='none-img'>
+                       <image src='/pages/icon/default_form.png' style='width:200rpx;height:200rpx;'></image>
+                    </view>
+                    <view class='none-text'>
+                        暂无报单
+                    </view>
+                </block>
+          </view>
+           <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+               <block wx:if="{{total!=0}}">
+               
+           <view wx:for="{{time}}" class='orderview' data-ordernum='{{item.orderNo}}' data-ordertype='{{item.type}}'  bindtap="godetail">
+          <view class='ordertop' >
+            <view class='orderstate'>报单已结束</view>
+            <block wx:if='{{item.type!="购买"}}'>
+            <view class='orderfix'>{{item.type}}</view>
+            </block>
+            <block wx:else>
+              <view class='orderbuy'>{{item.type}}</view>
+            </block>
+          </view>
+          <view class='usermsg'>
+            <view class='username'>{{item.name}}</view>
+            <view class='usertel'>{{item.mobile}}</view>
+            <view class='useradd'>{{item.inthecity}}{{item.detailAddress}}</view>
+          </view>
+          <view class='orderfooter'>
+            <view class='ordernum'>报单号:{{item.orderNo}}</view>
+            <view class='ordertime'>{{item.crtTime}}</view>
+          </view> 
+      </view>  
+     
+            </block>
+             <block wx:else>
+                    <view class='none-img'>
+                       <image src='/pages/icon/default_form.png' style='width:200rpx;height:200rpx;'></image>
+                    </view>
+                    <view class='none-text'>
+                        暂无报单
+                    </view>
+                </block>
+          </view>
+            <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                <block wx:if="{{total!=0}}">
+            
+       <view wx:for="{{time}}" class='orderview' data-ordernum='{{item.orderNo}}' data-ordertype='{{item.type}}'  bindtap="godetail">
+          <view class='ordertop' >
+            <view class='orderstate'>报单已关闭</view>
+            <block wx:if='{{item.type!="购买"}}'>
+            <view class='orderfix'>{{item.type}}</view>
+            </block>
+            <block wx:else>
+              <view class='orderbuy'>{{item.type}}</view>
+            </block>
+          </view>
+          <view class='usermsg'>
+            <view class='username'>{{item.name}}</view>
+            <view class='usertel'>{{item.mobile}}</view>
+            <view class='useradd'>{{item.inthecity}}{{item.detailAddress}}</view>
+          </view>
+          <view class='orderfooter'>
+            <view class='ordernum'>报单号:{{item.orderNo}}</view>
+            <view class='ordertime'>{{item.crtTime}}</view>
+          </view> 
+      </view>  
+               
+            </block>
+             <block wx:else>
+                    <view class='none-img'>
+                       <image src='/pages/icon/default_form.png' style='width:200rpx;height:200rpx;'></image>
+                    </view>
+                    <view class='none-text'>
+                        暂无报单
+                    </view>
+                </block>
+          </view>
+      </view>

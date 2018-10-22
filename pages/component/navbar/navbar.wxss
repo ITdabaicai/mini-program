@@ -1,0 +1,55 @@
+/* pages/component/navbar/navbar.wxss */
+.weui-navbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  z-index: 600;
+  top: 0;
+  width: 100%;
+  border-bottom: 1rpx solid #ccc;
+  background-color: #fff;
+}
+
+.weui-navbar__item {
+  position: relative;
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  padding: 25rpx 0;
+  text-align: center;
+  font-size: 0;
+}
+
+
+
+.weui-navbar__slider {
+  position: absolute;
+  content: " ";
+  left: 0;
+  bottom: 0;
+  width: 5%;
+  height: 6rpx;
+  color:#00ce9f;
+  background-color: #00ce9f;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.weui-navbar__title {
+  display: inline-block;
+  font-size: 30rpx;
+   color:#b1b5c7;
+  max-width: 8em;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+.weui-bar__item_on .weui-navbar__title {
+  color: #00ce9f !important; 
+}

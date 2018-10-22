@@ -1,0 +1,41 @@
+<!--pages/repairsdetail/repairsdetail.wxml-->
+<loading hidden="{{hidden}}">
+  加载中
+</loading>
+<block wx:if='{{succes}}'>
+<view class='cpmsg'>
+  报修结果
+</view>
+<view class='cptype'>
+  维保失败
+</view>
+<view class='cpmsg'>
+  失败原因
+</view>
+
+<view class='cptype'>{{dealres}}</view>
+
+
+</block>
+<block wx:else>
+  <view class='cpmsg'>
+    报修结果
+  </view>
+  <view class='cptype'>
+    维保成功
+  </view>
+  <view class='cpmsg'>
+  证明照片
+</view>
+  <view class="educt_upload_add" >
+    <block wx:for='{{imgs}}'>
+    <image src='{{item}}'  data-index="{{index}}" bindtap="previewImg" mode="aspectFill" ></image>
+    </block> 
+  </view>
+  <block wx:if='{{remark!="undefined"}}'>
+<view class='cpmsg'>
+  备注信息
+</view>
+   <view class='cptype'>{{remark}}</view>
+   </block>
+</block>

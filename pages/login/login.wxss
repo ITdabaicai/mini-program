@@ -1,0 +1,15 @@
+/* pages/login/login.wxss */
+
+.username{
+  background-color: white;
+  padding-left: 32rpx;
+}
+
+.loginbtn{
+  margin-top: 60rpx;
+  width: 92%;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #00ce9f;
+  color: #fff;
+}

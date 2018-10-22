@@ -1,0 +1,35 @@
+/* pages/repairsdetail/repairsdetail.wxss */
+.cpmsg{
+  height: 85rpx;
+  padding-left:30rpx;
+  color:#333333;
+  font-size: 26rpx;
+  line-height: 85rpx;
+}
+.cptype{
+  height: 110rpx;
+  padding-left:30rpx;
+  font-size: 30rpx;
+  line-height: 110rpx;
+  background: #fff;
+  position: relative;
+  color:#333333;
+}
+.line{
+  width: 92%;
+  height: 1rpx;
+  background: #b1b5c7;
+  position: absolute;
+  bottom:0rpx; 
+
+}
+.educt_upload_add{
+  min-height: 280rpx;
+  background: #fff;
+}
+.educt_upload_add image{
+  width: 200rpx;
+  height: 200rpx;
+  margin: 20rpx 0rpx 0rpx 30rpx;
+}
+

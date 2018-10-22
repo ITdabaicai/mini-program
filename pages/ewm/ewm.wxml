@@ -1,0 +1,16 @@
+<!--pages/ewm/ewm.wxml-->
+<loading hidden="{{hidden}}">
+  加载中
+</loading>
+<view class='bigview'>
+  <view class='ewmview'>
+      <view class='ewmimg'>
+        <image src='{{avatarUrl}}'></image>
+      </view>
+      <view class='ewmname'>{{name}}</view>
+      <view class='ewm'>
+        <image src='{{qrcode}}' style='width:500rpx;height:500rpx;'></image>
+      </view>
+      <view class='ewmtext'>扫描上面的二维码.绑定从属关系</view>
+  </view>
+</view>

@@ -1,0 +1,36 @@
+<loading hidden="{{hidden}}">
+  加载中
+</loading>
+<radio-group bindchange="radioChange"> 
+  <label class="radio" wx:for="{{method}}">
+      <view class='msg' data-num ="{{index}}" bindtap="clickNum">
+        <view class='isselect'>
+          <block wx:if="{{index==_num}}">
+              <image src='/pages/icon/list_selected.png' style='width:36rpx;height:36rpx;'></image>
+         </block>
+          <block wx:else>
+              <image src='/pages/icon/list_unselected.png' style='width:36rpx;height:36rpx;'></image>
+          </block>
+        </view>
+        <view class='name'>{{item.name}}</view>
+            <block wx:if='{{index!=0}}'>
+           <view class='line' ></view>
+        </block>
+      </view>
+    
+  </label>
+</radio-group>
+<block wx:if='{{ _num==4}}'>
+<view class='remark'>
+  <input  placeholder='自定义填写报单问题' placeholder-style='color: #b1b5c7;' bindinput="bindTextAreaBlur" auto-height ></input>
+</view>
+</block>
+
+
+<view class='tipw'>
+  为方便报单进展顺利，请及时更新报单最新动态
+</view>
+  
+<view class='sub'>
+  <button class="loginbtn"  bindtap='sub'>更新动态</button>
+</view>

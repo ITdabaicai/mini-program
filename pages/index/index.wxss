@@ -1,0 +1,66 @@
+/* pages/baodan/baodan.wxss */
+.bk{
+  position:relative;
+  height: 350rpx;
+  background: -webkit-linear-gradient(#0b1856, #324085); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#0b1856, #324085); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(#0b1856, #324085); /* Firefox 3.6 - 15 */
+  background: linear-gradient(#0b1856, #324085); /* 标准的语法（必须放在最后） */
+}
+.lefttriangle{
+  position: absolute;
+  bottom:0;
+  left: 0;
+  z-index: 55;
+  width:0px;
+  height:0px;
+  border-top:70rpx solid rgba(0,0,0,0);
+  border-right:250rpx solid  rgba(0,0,0,0);
+  border-bottom:150rpx solid #f7f7f7;
+  border-left:0rpx solid  rgba(0,0,0,0);
+}
+.righttriangle{
+  position: absolute;
+  bottom:0;
+  right: 0;
+  z-index: 55;
+  width:0px;
+  height:0px;
+  border-top:70rpx solid rgba(0,0,0,0);
+  border-right:0rpx solid  rgba(0,0,0,0);
+  border-bottom:150rpx solid #f7f7f7;
+  border-left:250rpx solid  rgba(0,0,0,0);
+}
+
+
+.handleform,.publicform{
+  width: 690rpx;
+  height: 390rpx;
+  border-radius: 4rpx;
+  background: #fff;
+  z-index: 88;
+  position: absolute;
+  left: 30rpx;
+  box-shadow: 0rpx 0rpx 10rpx rgba(0,0,0,0.2) ;
+}
+.handleform{
+  top: 80rpx;
+}
+.publicform{
+  top:510rpx;
+}
+
+.handleform image,.publicform image{
+  position: absolute;
+  left:245rpx;
+  top:60rpx;
+}
+.handleform text,.publicform text{
+  width: 200rpx;
+  text-align: center;
+  font-size: 34rpx;
+  color:#333333;
+  position: absolute;
+  left:245rpx;
+  bottom:60rpx;
+}

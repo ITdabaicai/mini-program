@@ -1,0 +1,47 @@
+/* pages/numpass/numpass.wxss */
+.numpass{
+  background-color: white;
+  padding-left: 32rpx;
+  position: relative;
+  height: 108rpx;
+}
+.numpass input:after {
+  content:'';
+  height: 2rpx;
+  background: #f2f2f2;
+  position: absolute;
+  bottom:0;
+  width: 92%;
+}
+.pass{
+    background-color: white;
+  padding-left: 32rpx;
+  position: relative;
+  height: 108rpx;
+}
+ .pass button{
+  position: absolute;
+  top: 30rpx;
+  right:60rpx;
+  text-align: center;
+  z-index: 999;
+  width: 170rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  padding: 0;
+  font-size: 26rpx;
+  background-color: #00ce9f;
+  color: #fff;
+  border: 1px solid #f2f2f2;
+  }
+.next{
+  margin-top:30rpx;
+}
+.loginbtn{
+  margin-top: 60rpx;
+  width: 92%;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #00ce9f;
+  color: #fff;
+}

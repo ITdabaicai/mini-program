@@ -1,0 +1,106 @@
+<loading hidden="{{hidden}}">
+  加载中
+</loading>
+<!-- orderfrom -->
+
+<block wx:if='{{timelength==0}}'>
+    <view class='none-img'>
+      <image src='/pages/icon/default_member.png' style='width:200rpx;height:200rpx;'></image>
+    </view>
+    <view class='none-text'>
+        暂无报单
+    </view>
+</block>
+<block wx:else>
+ <block wx:for="{{time}}" wx:key="*this">
+  <view class='orderview' bindtap="godetail" data-ord='{{item.orderNo}}' data-type='{{item.buttonType}}'  data-ordertype='{{item.type}}'  >
+      <view class='ordertop'>
+        <view class='orderstate'>待处理</view>
+        <block wx:if='{{item.status=="加急"}}'>
+        <view class='orderouttime'>已超时</view>
+        </block>
+        <block wx:if='{{item.type!="购买"}}'>
+        <view class='orderfix'>{{item.type}}</view>
+        </block>
+        <block wx:else>
+          <view class='orderbuy'>{{item.type}}</view>
+        </block>
+      </view>
+      <view class='usermsg'>
+        <view class='username'>{{item.name}}</view>
+        <view class='usertel'>{{item.mobile}}</view>
+        <view class='useradd'>{{item.inthecity}}{{item.detailAddress}}</view>
+      </view>
+      <view class='orderfooter'>
+        <view class='ordernum' >报单号:{{item.orderNo}}</view>
+        <block wx:if='{{item.buttonType=="0"}}'>
+          <view class='untake' data-ord='{{item.orderNo}}'  catchtap='getorder' >确认接单</view>
+        </block>
+        <block wx:elif='{{item.buttonType=="1"}}'>
+          <view class='cutdown' data-ord='{{item.orderNo}}'  catchtap='endorder' >确认关闭</view>
+          <view class='untake'  data-ord='{{item.orderNo}}' catchtap='sendorder' >确认派单</view>
+        </block>
+         <block wx:elif='{{item.buttonType=="2"}}'>
+          <view class='updata' data-ord='{{item.orderNo}}'  catchtap='updataorder'>更新动态</view>
+          <view class='untake' data-ord='{{item.orderNo}}'  catchtap='repororder' >上报反馈</view>
+        </block>
+         <block wx:elif='{{item.buttonType=="3"}}'>
+          <view class='untake' data-ord='{{item.orderNo}}' catchtap='reporproorder'>上报反馈</view>
+        </block>
+          <block wx:elif='{{item.buttonType=="4"}}'>
+          <view class='cutdown'data-ord='{{item.orderNo}}' catchtap='endorder' >确认关闭</view>
+          <view class='untake' data-ord='{{item.orderNo}}' catchtap='sendorder'>重新派单</view>
+        </block>
+          <block wx:else>
+          <view class='untake' data-ord='{{item.orderNo}}' >确认结果</view>
+        </block>
+      </view> 
+  </view>
+</block>
+<!-- 维保 -->
+   <block wx:for="{{time2}}" wx:key="*this">
+  <view class='orderview' bindtap="godetail" data-ord='{{item.orderNo}}' data-type='{{item.buttonType}}' data-ordertype='{{item.type}}'  >
+      <view class='ordertop'>
+        <view class='orderstate'>待处理</view>
+        <block wx:if='{{item.status=="加急"}}'>
+        <view class='orderouttime'>已超时</view>
+        </block>
+        <block wx:if='{{item.type!="购买"}}'>
+        <view class='orderfix'>{{item.type}}</view>
+        </block>
+        <block wx:else>
+          <view class='orderbuy'>{{item.type}}</view>
+        </block>
+      </view>
+      <view class='usermsg'>
+        <view class='username'>{{item.name}}</view>
+        <view class='usertel'>{{item.mobile}}</view>
+        <view class='useradd'>{{item.inthecity}}{{item.detailAddress}}</view>
+      </view>
+      <view class='orderfooter'>
+        <view class='ordernum' >报单号:{{item.orderNo}}</view>
+        <block wx:if='{{item.buttonType=="0"}}'>
+          <view class='untake' data-ord='{{item.orderNo}}'  catchtap='getorderw' >确认接单</view>
+        </block>
+        <block wx:elif='{{item.buttonType=="1"}}'>
+          <view class='cutdown' data-ord='{{item.orderNo}}'  catchtap='endorderw' >确认关闭</view>
+          <view class='untake'  data-ord='{{item.orderNo}}'  catchtap='sendorderw' >确认派单</view>
+        </block>
+         <block wx:elif='{{item.buttonType=="2"}}'>
+          <view class='updata' data-ord='{{item.orderNo}}'  catchtap='updataorderw'>更新动态</view>
+          <view class='untake' data-ord='{{item.orderNo}}'  catchtap='repororderw' >上报反馈</view>
+        </block>
+         <block wx:elif='{{item.buttonType=="3"}}'>
+          <view class='untake' data-ord='{{item.orderNo}}' catchtap='reporproorderw'>上报反馈</view>
+        </block>
+          <block wx:elif='{{item.buttonType=="4"}}'>
+          <view class='cutdown'data-ord='{{item.orderNo}}' catchtap='endorderw'  >确认关闭</view>
+          <view class='untake' data-ord='{{item.orderNo}}' catchtap='sendorderw' >重新派单</view>
+        </block>
+          <block wx:else>
+          <view class='untake' data-ord='{{item.orderNo}}' catchtap='clearorderw' >确认结果</view>
+        </block>
+      </view> 
+  </view>
+</block>
+</block>

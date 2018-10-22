@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "navbar": "../component/xnavbar/navbar"
+  },
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "navigationBarTitleText": "记录"
+}

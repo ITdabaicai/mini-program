@@ -1,0 +1,26 @@
+<!--pages/choosefw/choosefw.wxml-->
+<radio-group bindchange="radioChange"> 
+  <label class="radio" wx:for="{{neirong}}">
+      <view class='msg' data-num ="{{index}}" data-id='{{item.id}}' bindtap="clickNum">
+       <view class='line'></view>
+        <view class='isselect'>
+          <block wx:if="{{index==_num}}">
+              <image src='/pages/icon/list_selected.png' style='width:36rpx;height:36rpx;'></image>
+         </block>
+          <block wx:else>
+              <image src='/pages/icon/list_unselected.png' style='width:36rpx;height:36rpx;'></image>
+          </block>
+        </view>
+          <view class='touxiang'>
+          <image src='{{item.headurl}}' style='width:70rpx;height:70rpx;  border-radius:70rpx;overflow:hidden;'></image>
+        </view>
+        <view class='name'>{{item.name}}</view>
+        <view class='record'>已结束{{item.endCount}}单</view>
+      </view>
+     </label>
+</radio-group>
+
+  
+<view class='sub'>
+  <button class="loginbtn"  bindtap='sub'>确认派单</button>
+</view>

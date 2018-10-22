@@ -1,0 +1,68 @@
+/* pages/relation/relation.wxss */
+
+
+.weui-tab__panel {
+  box-sizing: border-box;
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.personview{
+  height: 150rpx;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.left{
+  position: absolute;
+  left: 20rpx;
+  top:40rpx;
+  height: 70rpx;
+  width: 70rpx;
+  background: gray;
+  border-radius: 70rpx;
+  overflow: hidden;
+}
+.personmsg{
+  position: absolute;
+  left: 110rpx;
+  top:25rpx;
+}
+.namemsg{
+  font-size: 26rpx;
+  display: inline-table;
+  margin-right:20rpx;
+}
+
+.ordernum{
+  font-size: 22rpx;
+   margin-right: 20rpx;
+  display: inline-table;
+}
+.relationmsg{
+ position: absolute;
+ top: 65rpx;
+ left:110rpx;
+}
+
+.right{
+  position: absolute;
+  right: 30rpx;
+  top:50rpx;
+}
+
+.none-img{
+  position: absolute;
+  top: 150rpx;
+  left:265rpx;
+}
+.none-text{
+  position: absolute;
+  top: 375rpx;
+  left:265rpx;
+  font-size: 30rpx;
+  color:#b1b5c7;
+  text-align: center;
+  width: 200rpx;
+}

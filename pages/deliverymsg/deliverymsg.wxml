@@ -1,0 +1,34 @@
+<!--pages/deliverymsg/deliverymsg.wxml-->
+
+<loading hidden="{{hidden}}">
+  加载中
+</loading>
+
+<view class='cptype'>
+  <input placeholder='商务对接人（请填写真实姓名）' maxlength='4' bindinput ="userNameInput"/>
+  <view class='line'></view>
+</view>
+
+<view class='cptype'>
+  <input placeholder='手机号码' type='number' maxlength='11' bindinput="passWdInput"/>
+    <view class='line'></view>
+</view>
+
+   <picker mode="date" value="{{date}}" start="{{date}}" end="2025-09-01" bindchange="bindDateChange">
+    <view class="cptype">
+      {{res}}: {{date}}
+        <image class='list_more' src='/pages/icon/list_more.png' style='width:24rpx;height:24rpx;'></image>
+         <view class='line'></view>
+    </view>
+    
+    </picker>
+   <picker mode="time" value="{{time}}" start="08:00" end="18:00" bindchange="bindTimeChange">
+    <view class="cptype">
+      {{rest}}: {{time}}
+        <image class='list_more' src='/pages/icon/list_more.png' style='width:24rpx;height:24rpx;'></image>
+
+    </view>
+    </picker>
+<view class='sub'>
+  <button class="loginbtn"  bindtap='sub'>确认派单</button>
+</view>

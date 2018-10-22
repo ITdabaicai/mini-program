@@ -1,0 +1,11 @@
+<!--pages/login/login.wxml-->
+
+<loading hidden="{{hidden}}">
+  加载中
+</loading>
+  <view class='bigout'>
+    <view class="username">
+        <input class="weui-input" bindinput='watchtelname' type='text'  maxlength='4' placeholder="真实姓名"/>
+    </view>
+    <button class="loginbtn"  bindtap='sub'>提交</button>
+  </view>

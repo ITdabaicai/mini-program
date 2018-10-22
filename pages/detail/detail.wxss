@@ -1,0 +1,282 @@
+page{
+  min-height: 90%;
+}
+.bk{
+  position:relative;
+  height: 350rpx;
+  background: -webkit-linear-gradient(#0b1856, #324085); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#0b1856, #324085); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(#0b1856, #324085); /* Firefox 3.6 - 15 */
+  background: linear-gradient(#0b1856, #324085); /* 标准的语法（必须放在最后） */
+}
+.lefttriangle{
+  position: absolute;
+  bottom:0;
+  left: 0;
+  z-index: 55;
+  width:0px;
+  height:0px;
+  border-top:70rpx solid rgba(0,0,0,0);
+  border-right:250rpx solid  rgba(0,0,0,0);
+  border-bottom:150rpx solid #f7f7f7;
+  border-left:0rpx solid  rgba(0,0,0,0);
+}
+.righttriangle{
+  position: absolute;
+  bottom:0;
+  right: 0;
+  z-index: 55;
+  width:0px;
+  height:0px;
+  border-top:70rpx solid rgba(0,0,0,0);
+  border-right:0rpx solid  rgba(0,0,0,0);
+  border-bottom:150rpx solid #f7f7f7;
+  border-left:250rpx solid  rgba(0,0,0,0);
+}
+
+
+
+/* top */
+.endtop{
+  position: absolute;
+  top:80rpx;
+  left: 50%;
+  margin-left:-345rpx;
+  width: 690rpx;
+  height: 340rpx;
+  background-color: white;
+  text-align: center;
+  padding-top: 40rpx;
+  z-index: 999
+}
+.top{
+  font-size: 40rpx;
+  color:#333333;
+}
+.center{
+  height: 130rpx;
+  position: relative;
+}
+.center-orderfix{
+  position: absolute;
+  top: 30rpx;
+  left:140rpx;
+  width: 60rpx;
+  height: 40rpx;
+  border: #00ce9f 1px solid;
+  color: #00ce9f;
+  border-radius:4rpx;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 40rpx;
+}
+.center-buy{
+  position: absolute;
+  top: 30rpx;
+  left:140rpx;
+  width: 60rpx;
+  height: 40rpx;
+  border: #6a7fdb 1px solid;
+  color: #6a7fdb;
+  border-radius:4rpx;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 40rpx;
+}
+
+
+.center-ordernum{
+  position: absolute;
+  top: 30rpx;
+  left:220rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 26rpx;
+  color:#999999;
+}
+.footer{
+ position: relative;
+}
+.footerview{
+  width:120rpx;
+  height:160rpx;
+  display:inline-block;
+}
+.footerview image{
+  height: 50rpx;
+  width:50rpx;
+  display:inline-block;
+}
+.footerview text{
+  font-size: 26rpx;
+  color:#b1b5c7;
+  display:inline-block;
+}
+ .footerview .getg{
+    color:#00ce9f;
+  }
+.getg{
+   color:#00ce9f;
+}
+
+.line{
+  width:90rpx;
+  height:70rpx;
+  border-top: 2rpx solid #f2f2f2;
+  display:inline-block;
+  }
+  /* footer */
+  .endfooter{
+    position: absolute;
+    top:480rpx;
+    left: 30rpx;
+    width: 92%;
+    min-height: 350rpx;
+    background-color: white;
+    overflow: auto;
+    padding-top:40rpx;
+  }
+  .fortime{
+    height: 120rpx;
+    position: relative;
+  }
+  
+  .circle{
+    position: absolute;
+    top: 0;
+    left:60rpx;
+    width: 30rpx;
+    height: 30rpx;
+    border-radius: 30rpx;
+    border: 1rpx solid #b1b5c7;
+  }
+  .icircle{
+    position: absolute;
+    top: 10rpx;
+    left:68rpx;
+    width: 17rpx;
+    height: 17rpx;
+    border-radius: 17rpx;
+    background:  #b1b5c7;
+  }
+  .contectline{
+    position: absolute;
+    top: 30rpx;
+    left:75rpx;
+     background:  #b1b5c7;  
+     height: 90rpx;
+     width: 1rpx;
+  }
+
+  .time{
+    position: absolute;
+    top: 0rpx;
+    left:150rpx;
+    font-size: 22rpx;
+    color:#666666;
+  }
+   .timemsg{
+    position: absolute;
+    top: 40rpx;
+    left:150rpx;
+    font-size: 26rpx;
+    color:#666666;
+  }
+
+
+  /* lastone */
+
+
+  .lcircle{
+    position: absolute;
+    top: 0;
+    left:60rpx;
+    width: 30rpx;
+    height: 30rpx;
+    border-radius: 30rpx;
+    border: 1rpx solid red;
+  }
+  .licircle{
+    position: absolute;
+    top: 10rpx;
+    left:68rpx;
+    width: 17rpx;
+    height: 17rpx;
+    border-radius: 17rpx;
+    background:  red;
+  }
+  .lcontectline{
+    position: absolute;
+    top: 30rpx;
+    left:75rpx;
+    background:  red;  
+    height: 90rpx;
+    width: 1rpx;
+  }
+
+  .ltime{
+    position: absolute;
+    top: 0rpx;
+    left:150rpx;
+    font-size: 22rpx;
+    color:red;
+  }
+   .ltimemsg{
+    position: absolute;
+    top: 40rpx;
+    left:150rpx;
+    font-size: 26rpx;
+    color:red;
+  }
+
+/* firstone */
+
+  .fcircle{
+    position: absolute;
+    top: 0;
+    left:60rpx;
+    width: 30rpx;
+    height: 30rpx;
+    border-radius: 30rpx;
+    border: 1rpx solid #b1b5c7;
+  }
+  .ficircle{
+    position: absolute;
+    top: 10rpx;
+    left:68rpx;
+    width: 17rpx;
+    height: 17rpx;
+    border-radius: 17rpx;
+    background:  #b1b5c7;
+  }
+  .fcontectline{
+    position: absolute;
+    top: 30rpx;
+    left:75rpx; 
+    height: 80rpx;
+    width: 1rpx;
+  }
+
+  .ftime{
+    position: absolute;
+    top: 0rpx;
+    left:150rpx;
+    font-size: 22rpx;
+    color:#666666;
+  }
+   .ftimemsg{
+    position: absolute;
+    top: 40rpx;
+    left:150rpx;
+    font-size: 26rpx;
+    color:#666666;
+  }
+ .thedetail{
+  border: 1px solid #00ce9f;
+  color: #00ce9f;
+  width: 120rpx;
+  text-align: center;
+  display: inline-block;
+  margin: 10rpx;
+  font-size:20rpx; 
+}

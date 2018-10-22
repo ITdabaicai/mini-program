@@ -1,0 +1,15 @@
+<!--pages/numpass/numpass.wxml-->
+
+<loading hidden="{{hidden}}">
+  加载中
+</loading>
+ <view class='bigout'>
+      <view class="numpass">
+    <input bindinput='watchtelnum' type='number'  maxlength='11' placeholder="手机号"/>
+      </view>
+      <view class="pass">
+      <input bindinput='watchtelcode' type='number' maxlength='4' placeholder="验证码"/>     
+      <button class='getnum' size='mini' loading="{{loading}}" disabled="{{disabled}}" bindtap='tryget'  >{{text}}</button>
+      </view>
+       <button class='loginbtn'  bindtap='gologin' >下一步</button>  
+ </view>

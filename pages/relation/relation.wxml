@@ -1,0 +1,239 @@
+<!--pages/relation/relation.wxml-->
+
+<navbar tabs="{{tab}}"  ishasyw='{{ishasyw}}' ishasfw='{{ishasfw}}' sliderLeft='{{sliderLeft}}'  bind:myevent="onGetCode"  >
+</navbar>
+    <block wx:if='{{juese==0}}'>
+          <view class="weui-tab__panel">
+              <view class="weui-tab__content"  hidden="{{activeIndex != 0}}">
+                <block wx:if='{{ishasyw}}'>
+                  <block wx:for='{{neirong}}'>
+                  <view class='personview'>
+                    <view class='left'>
+                      <image src='{{item.headUrl}}' style='width:70rpx;height:70rpx;'></image>
+                    </view>
+                    <view class='personmsg'>
+                      <view class='namemsg'> {{item.name}} </view>  
+                      <view class='namemsg'> {{item.mobile}}  </view>  
+                    </view>      
+                    <view class='relationmsg'>    
+                        <view class='ordernum'> 编号:{{item.id}} </view>  
+                        <view class='ordernum'> 代理商{{item.otherNum}}名  </view>
+                    </view> 
+                    <view class='right'>
+                  <image src='/pages/icon/list_call.png' data-num='{{item.mobile}}' catchtap='call' style='width:50rpx;height:50rpx;'></image>
+                    </view>
+                  </view>
+                  </block>
+                </block>
+                <block wx:else>
+                  <view class='none-img'>
+                      <image src='/pages/icon/default_member.png' style='width:200rpx;height:200rpx;'></image>
+                  </view>
+                  <view class='none-text'>
+                      暂无业务员
+                  </view>
+              </block>
+
+              </view>
+              <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                <block wx:if='{{ishasfw}}'>
+                  <block wx:for='{{neirong}}'>
+                    <view class='personview'>
+                        <view class='left'>
+                          <image src='{{item.headUrl}}'  style='width:70rpx;height:70rpx;'></image>
+                        </view>
+                        <view class='personmsg'>
+                          <view class='namemsg'> {{item.name}} </view>  
+                          <view class='namemsg'> {{item.mobile}}  </view>  
+                        </view>      
+                        <view class='relationmsg'>    
+                            <view class='ordernum'> 编号:{{item.id}} </view>  
+                            <view class='ordernum'> 业务员{{item.salesmanNum}}名  </view>
+                            <view class='ordernum'> 经销商{{item.salesmanNum}}名  </view>
+                        </view> 
+                          <view class='right'>
+                        <image src='/pages/icon/list_call.png' data-num='{{item.mobile}}' catchtap='call' style='width:50rpx;height:50rpx;'></image>
+                          </view>
+                      </view>
+                  </block>
+                </block>
+                <block wx:else>
+                    <view class='none-img'>
+                      <image src='/pages/icon/default_member.png' style='width:200rpx;height:200rpx;'></image>
+                    </view>
+                    <view class='none-text'>
+                        暂无服务商
+                    </view>
+                </block>
+              </view>
+          </view>
+    </block>
+      <block wx:elif='{{juese==2}}'>
+          <view class="weui-tab__panel">
+              <view class="weui-tab__content"  hidden="{{activeIndex != 0}}">
+                <block wx:if='{{ishasyw}}'>
+                  <block wx:for='{{neirong}}'>
+                  <view class='personview'>
+                    <view class='left'>
+                      <image src='{{item.headUrl}}' style='width:70rpx;height:70rpx;'></image>
+                    </view>
+                    <view class='personmsg'>
+                      <view class='namemsg'> {{item.name}} </view>  
+                      <view class='namemsg'> {{item.mobile}}  </view>  
+                    </view>      
+                    <view class='relationmsg'>    
+                        <view class='ordernum'> 编号:{{item.id}} </view>  
+                        <view class='ordernum'> 经销商{{item.otherNum}}名  </view>
+                    </view> 
+                    <view class='right'>
+                  <image src='/pages/icon/list_call.png' data-num='{{item.mobile}}' catchtap='call' style='width:50rpx;height:50rpx;'></image>
+                    </view>
+                  </view>
+                  </block>
+                </block>
+                <block wx:else>
+                  <view class='none-img'>
+                      <image src='/pages/icon/default_member.png' style='width:200rpx;height:200rpx;'></image>
+                  </view>
+                  <view class='none-text'>
+                      暂无业务员
+                  </view>
+              </block>
+
+              </view>
+              <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                <block wx:if='{{ishasfw}}'>
+                  <block wx:for='{{neirong2}}'>
+                    <view class='personview'>
+                        <view class='left'>
+                          <image src='{{item.headUrl}}'  style='width:70rpx;height:70rpx;'></image>
+                        </view>
+                        <view class='personmsg'>
+                          <view class='namemsg'> {{item.name}} </view>  
+                          <view class='namemsg'> {{item.mobile}}  </view>  
+                        </view>      
+                        <view class='relationmsg'>    
+                            <view class='ordernum'> 编号:{{item.id}} </view>  
+                            <view class='ordernum'>已结束{{item.count}}单 </view>
+                        </view> 
+                          <view class='right'>
+                        <image src='/pages/icon/list_call.png' data-num='{{item.mobile}}' catchtap='call' style='width:50rpx;height:50rpx;'></image>
+                          </view>
+                      </view>
+                  </block>
+                </block>
+                <block wx:else>
+                    <view class='none-img'>
+                      <image src='/pages/icon/default_member.png'  style='width:200rpx;height:200rpx;'></image>
+                    </view>
+                    <view class='none-text'>
+                        暂无服务商
+                    </view>
+                </block>
+              </view>
+          </view>
+    </block>
+     <block wx:elif='{{juese==4}}'> 
+          <view class="weui-tab__panel">
+              <view class="weui-tab__content"  hidden="{{activeIndex != 0}}">
+                <block wx:if='{{ishasyw}}'>
+                  <block wx:for='{{neirong}}'>
+                  <view class='personview'>
+                    <view class='left'>
+                      <image src='{{item.headUrl}}'  style='width:70rpx;height:70rpx;'></image>
+                    </view>
+                    <view class='personmsg'>
+                      <view class='namemsg'> {{item.name}} </view>  
+                      <view class='namemsg'> {{item.mobile}}  </view>  
+                    </view>      
+                    <view class='relationmsg'>    
+                        <view class='ordernum'> 编号:{{item.id}} </view>  
+                        <view class='ordernum'> 服务商{{item.otherNum}}名  </view>
+                    </view> 
+                    <view class='right'>
+                  <image src='/pages/icon/list_call.png' data-num='{{item.mobile}}' catchtap='call' style='width:50rpx;height:50rpx;'></image>
+                    </view>
+                  </view>
+                  </block>
+                </block>
+                <block wx:else>
+                  <view class='none-img'>
+                      <image src='/pages/icon/default_member.png' style='width:200rpx;height:200rpx;'></image>
+                  </view>
+                  <view class='none-text'>
+                      暂无业务员
+                  </view>
+              </block>
+
+              </view>
+              <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                <block wx:if='{{ishasfw}}'>
+                  <block wx:for='{{neirong2}}'>
+                    <view class='personview'>
+                        <view class='left'>
+                          <image src='{{item.headUrl}}' style='width:70rpx;height:70rpx;'></image>
+                        </view>
+                        <view class='personmsg'>
+                          <view class='namemsg'> {{item.name}} </view>  
+                          <view class='namemsg'> {{item.mobile}}  </view>  
+                        </view>      
+                        <view class='relationmsg'>    
+                            <view class='ordernum'> 编号:{{item.id}} </view>  
+                            <view class='ordernum'>已结束{{item.count}}单 </view>
+                        </view> 
+                          <view class='right'>
+                        <image src='/pages/icon/list_call.png' data-num='{{item.mobile}}' catchtap='call' style='width:50rpx;height:50rpx;'></image>
+                          </view>
+                      </view>
+                  </block>
+                </block>
+                <block wx:else>
+                    <view class='none-img'>
+                      <image src='/pages/icon/default_member.png'  style='width:200rpx;height:200rpx;'></image>
+                    </view>
+                    <view class='none-text'>
+                        暂无服务商
+                    </view>
+                </block>
+              </view>
+          </view>
+    </block>
+<block wx:else>
+  <block wx:if='{{ishasfw}}'>
+    <block wx:for='{{neirong3}}'>
+      <view class='personview'>
+          <view class='left'>
+            <image src='{{item.headUrl}}'  style='width:70rpx;height:70rpx;'></image>
+          </view>
+          <view class='personmsg'>
+            <view class='namemsg'> {{item.name}} </view>  
+            <view class='namemsg'> {{item.mobile}}  </view>  
+          </view>      
+          <view class='relationmsg'>    
+              <view class='ordernum'> 编号:{{item.id}} </view>  
+              <view class='ordernum'> 业务员{{item.salesmanNum}}名  </view> 
+              <block wx:if='{{juese==1}}'>
+              <view class='ordernum'> 经销商{{item.otherNum}}名  </view> 
+              </block>
+              <block wx:elif='{{juese==3}}'>
+              <view class='ordernum'> 服务商{{item.otherNum}}名  </view> 
+              </block>
+               <block wx:else>
+              <view class='ordernum'> 已结束{{item.count}}名  </view> 
+              </block>
+          </view> 
+            <view class='right'>
+          <image src='/pages/icon/list_call.png' data-num='{{item.mobile}}' catchtap='call' style='width:50rpx;height:50rpx;'></image>
+            </view>
+        </view>
+    </block>
+   </block>
+   <block wx:else>
+    <view class='none-img'>
+    <image src='/pages/icon/default_member.png' style='width:200rpx;height:200rpx;'></image>
+    </view>
+    <view class='none-text'>
+        暂无业务员
+    </view>
+   </block> 
+</block>

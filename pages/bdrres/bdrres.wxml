@@ -1,0 +1,56 @@
+<!--pages/choosefw/choosefw.wxml-->
+<loading hidden="{{hidden}}">
+  加载中
+</loading>
+<view class='cpmsg'>
+  报修结果（必填）
+</view>
+<view class='cptype' bindtap="actionSheetTap" >
+  {{res}}
+       <image class='list_more' src='/pages/icon/list_more.png' style='width:24rpx;height:24rpx;'></image>
+</view>
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+    <block wx:for="{{actionSheetItems}}">
+        <action-sheet-item class="item" bindtap="bindItemTap" data-name="{{item}}">{{item}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>
+
+
+<block wx:if='{{res=="维保失败"}}'>
+<view class='cpmsg'>
+  失败原因（必填）
+</view>
+  <view class="textarea-wrp">
+    <textarea  bindinput="bindTextAreaBlur"  placeholder='自定义填写' name='sucremark' placeholder-style='color:#b1b5c7;font-size:30rpx;'              auto-height />
+  </view>
+<view class='sub'>
+   <button class="loginbtn"  bindtap='fsub'>上报反馈</button>
+</view>
+</block>
+<block wx:else>
+  <view class='cpmsg'>
+  证明照片（必填）
+</view>
+<view class="educt_upload_add">
+ <view class="educt_hasupload_pic" wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+  <image src="{{item}}" class='upload' data-index="{{index}}" bindtap="previewImg"></image>
+  <view class="delete-btn" data-index="{{index}}" >
+    <image src='/pages/icon/photograph_delete.png' bindtap="deleteImg" style='width:40rpx;height:40rpx;'></image>
+  </view>
+ </view>
+       <image src="/pages/icon/form_photograph.png"  hidden='{{imgs.length>=9?true:false}}' bindtap="chooseImg" style='width:200rpx;height:200rpx;margin: 20rpx 0rpx 0rpx 30rpx;'></image>
+</view>
+
+
+<view class='cpmsg'>
+  备注信息（选填）
+</view>
+
+  <view class="textarea-wrp">
+    <textarea  bindinput="bindremarkAreaBlur"     placeholder='备注信息' name='sucremark' placeholder-style='color:#b1b5c7;font-size:30rpx;'              auto-height />
+  </view>
+  <view class='sub'>
+    <button class="loginbtn"  bindtap='sub'>上报反馈</button>
+  </view>
+</block>

@@ -1,0 +1,116 @@
+<!--pages/myself/myself.wxml-->
+
+
+<!-- top -->
+<loading hidden="{{hidden}}">
+  加载中
+</loading>
+<view class='mymsg'>
+    <view class='touxiang'>
+    <image wx:if='{{token==0}}' src='/pages/icon/default_head.png' style='width:120rpx;height:120rpx;'></image>
+    <image wx:else src='{{avatarUrl}}' style='width:120rpx;height:120rpx;'></image>
+    </view>
+     <block wx:if='{{token==0}}'>
+     <label>
+      <view class='loginfont'>登录/注册
+     <button open-type="getUserInfo" hover-class='none'bindgetuserinfo="getUserInfoFun"></button>
+      </view>
+      </label>
+    </block>
+    <block wx:else>
+     <view class='myname'>{{name}}</view>
+    </block>
+      <block wx:if='{{juese==0}}'>
+        <view class='mypositon' style='left:{{mypositionleft}}'>总部</view>
+     </block>
+      <block wx:elif='{{juese==1}}'>
+        <view class='mypositon' style='left:{{mypositionleft}}'>总部业务员</view>
+     </block>
+       <block wx:elif='{{juese==2}}'>
+        <view class='mypositon' style='left:{{mypositionleft}}'>代理商</view>
+     </block>
+       <block wx:elif='{{juese==3}}'>
+        <view class='mypositon' style='left:{{mypositionleft}}'>代理商业务员</view>
+     </block>
+      <block wx:elif='{{juese==4}}'>
+        <view class='mypositon' style='left:{{mypositionleft}}'>经销商</view>
+     </block>
+      <block wx:elif='{{juese==5}}'>
+        <view class='mypositon' style='left:{{mypositionleft}}'>经销商业务员</view>
+     </block>
+      <block wx:elif='{{juese==6}}'>
+        <view class='mypositon' style='left:{{mypositionleft}}'>服务商</view>
+     </block>
+
+      <block wx:if='{{token!=0}}'>
+     <view class='mytel'>{{tel}}</view>
+        </block>
+     <block wx:if='{{juese!=7}}'>
+    <view class='myblock' bindtap='goewm'></view>
+    <view class='myewm'>
+      <image src="/pages/icon/mine_Qr_code.png" style='width:36rpx;height:36rpx'></image>
+    </view>
+    <view class='mymore'>
+      <image src="/pages/icon/list_more_white.png" style='width:24rpx;height:24rpx'></image>
+    </view>
+  </block> 
+</view>
+<!-- center -->
+<view class='allmsg'>
+      <view class='ot' data-lookf='a' bindtap='lookf' >
+          <view class='otnum'>{{allCount}}</view>
+          <view class='otname'>全部报单</view>
+      </view>
+      <view class='ot' data-lookf='s' bindtap='lookf'>
+          <view class='otnum'>{{sendCount}}</view>
+          <view class='otname'>我发出的</view>
+      </view>
+      <view class='ot' data-lookf='h' bindtap='lookf'>
+          <view class='otnum'>{{dealCount}}</view>
+          <view class='otname'>我处理的</view>
+      </view>
+</view> 
+<!-- kefu -->
+<view class='kefu'>
+     <block wx:if='{{juese==7}}'>
+       <view class='kefu-fisrt' bindtap="click">
+          <view class='saoyisaoimg'>
+            <image src='/pages/icon/mine_scan.png' style='width:30rpx;height:30rpx;'></image>
+          </view>
+          <view class='saoyisaotext' >
+            扫一扫
+          </view> 
+          <view class='enter'>
+            <image src='/pages/icon/list_more.png' style='width:25rpx;height:25rpx;'></image>
+          </view>
+        </view>
+     </block>
+       <block wx:else>
+       <view  class='kefu-fisrt' bindtap='gorelation'>
+          <view class='saoyisaoimg'>
+            <image src='/pages/icon/mine_relation.png' style='width:30rpx;height:30rpx;'></image>
+          </view>
+          <view class='saoyisaotext'>
+            从属关系
+          </view> 
+          <view class='enter'>
+         <image src='/pages/icon/list_more.png' style='width:25rpx;height:25rpx;'></image>
+          </view>
+        </view>
+     </block>
+     <view class='line'></view>
+     <view class='kefusecond' bindtap='callkefu' >
+         <view class='kefuimg'>
+            <image src='/pages/icon/mine_service.png' style='width:30rpx;height:30rpx;'></image>
+          </view>
+          <view class='kefutext'>
+            客服电话
+          </view> 
+          <view class='kefutel'>
+            010-42352677
+          </view>
+     </view>
+</view>
+  <block wx:if='{{token!=0}}'>
+  <button class='logout' bindtap='getout'>退出登录</button>
+</block>

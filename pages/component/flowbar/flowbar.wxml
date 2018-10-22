@@ -1,0 +1,7 @@
+<!--pages/component/flowbar/flowbar.wxml-->
+<view class='content'>
+  <view class='bar'>
+    <image  class='iconback' src="{{src}}" bindtap="goback"></image>
+    <view class='bartitle'>{{title}}</view>
+  </view>
+</view>

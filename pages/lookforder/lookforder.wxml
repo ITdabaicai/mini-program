@@ -1,0 +1,55 @@
+<!--pages/handleform/handleform.wxml-->
+<loading hidden="{{hidden}}">
+  加载中
+</loading>
+  <block wx:if='{{total==0&&total2==0}}'>
+      <view class='none-img'>
+        <image src='/pages/icon/default_member.png' style='width:200rpx;height:200rpx;'></image>
+      </view>
+      <view class='none-text'>
+          暂无报单
+      </view>
+  </block>
+  <block wx:else>
+          <view wx:for="{{msg2}}" class='orderview' data-ordernum='{{item.orderNo}}' data-ordertype='{{item.type}}'  bindtap="godetail">
+          <view class='ordertop' >
+            <view class='orderstate'>{{item.state==null?item.status:item.state}}</view>
+            <block wx:if='{{item.type!="购买"}}'>
+            <view class='orderfix'>{{item.type}}</view>
+            </block>
+            <block wx:else>
+              <view class='orderbuy'>{{item.type}}</view>
+            </block>
+          </view>
+          <view class='usermsg'>
+            <view class='username'>{{item.name}}</view>
+            <view class='usertel'>{{item.mobile}}</view>
+            <view class='useradd'>{{item.inthecity}}{{item.detailAddress}}</view>
+          </view>
+          <view class='orderfooter'>
+            <view class='ordernum'>报单号:{{item.orderNo}}</view>
+            <view class='ordertime'>{{item.crtTime}}</view>
+          </view> 
+      </view>     
+      <view wx:for="{{msg}}" class='orderview' data-ordernum='{{item.orderNo}}' data-ordertype='{{item.type}}'  bindtap="godetail">
+          <view class='ordertop' >
+            <view class='orderstate'>{{item.state}}</view>
+            <block wx:if='{{item.type!="购买"}}'>
+            <view class='orderfix'>{{item.type}}</view>
+            </block>
+            <block wx:else>
+              <view class='orderbuy'>{{item.type}}</view>
+            </block>
+          </view>
+          <view class='usermsg'>
+            <view class='username'>{{item.name}}</view>
+            <view class='usertel'>{{item.mobile}}</view>
+            <view class='useradd'>{{item.inthecity}}{{item.detailAddress}}</view>
+          </view>
+          <view class='orderfooter'>
+            <view class='ordernum'>报单号:{{item.orderNo}}</view>
+            <view class='ordertime'>{{item.crtTime}}</view>
+          </view> 
+      </view>   
+   
+  </block>

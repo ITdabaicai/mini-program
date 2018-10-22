@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+      "flowbar": "../component/flowbar/flowbar"
+    }
+    ,
+    "navigationBarTitleText": "登录"
+}

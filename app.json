@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/myself/myself",
+    "pages/ewm/ewm",
+    "pages/relation/relation",
+    "pages/lookforder/lookforder",
+    "pages/repairsdetail/repairsdetail",
+    "pages/gohandle/gohandle",
+    "pages/gohandledetail/gohandledetail",
+    "pages/public/public",
+    "pages/bddt/bddt",
+    "pages/bdrdt/bdrdt",
+    "pages/bdprob/bdprob",
+    "pages/bdres/bdres",
+    "pages/bdrres/bdrres",
+    "pages/index/index",
+    "pages/deliverymsg/deliverymsg",
+    "pages/num/num",
+    "pages/login/login",
+    "pages/record/record",
+    "pages/choosefw/choosefw",
+    "pages/checkdetail/checkdetail",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0B1856",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "#fff",
+    "enablePullDownRefresh": false
+
+  },
+  "tabBar": {
+    "color": "#b1b5c7",
+    "selectedColor": "#0b1856",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "报单",
+        "selectedIconPath": "pages/icon/tabbar_form02.png",
+        "iconPath": "pages/icon/tabbar_form01.png"
+      },
+      {
+        "pagePath": "pages/record/record",
+        "text": "纪录",
+        "selectedIconPath": "pages/icon/tabbar_record02.png",
+        "iconPath": "pages/icon/tabbar_record01.png"
+      },
+      {
+        "pagePath": "pages/myself/myself",
+        "text": "我的",
+        "iconPath": "pages/icon/tabbar_mine01.png",
+        "selectedIconPath": "pages/icon/tabbar_mine02.png"
+      }
+    ]
+  }
+}

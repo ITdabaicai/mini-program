@@ -1,0 +1,53 @@
+/* pages/choosefw/choosefw.wxss */
+
+
+.msg{
+  height: 150rpx;
+  background: #fff;
+  position: relative;
+}
+.isselect{
+  position: absolute;
+  top: 57rpx;
+  left: 30rpx;
+}
+.touxiang{
+  position: absolute;
+  top: 42rpx;
+  left: 96rpx;
+}
+
+.name{
+  position: absolute;
+  top: 40rpx;
+  left: 186rpx;
+  font-size: 30rpx;
+  color:#333333;
+}
+.record{
+  position: absolute;
+  top: 90rpx;
+  left: 186rpx;
+  font-size:22rpx;
+  color:#b1b5c7;
+}
+
+.sub{
+  margin-top: 60rpx;
+}
+.loginbtn{
+  width: 92%;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #00ce9f;
+  color: #fff;
+  font-size: 32rpx;
+}
+.line{
+  width: 82%;
+  height: 1px;
+  background: #b1b5c7;
+  position: absolute;
+  top:0rpx; 
+  left:96rpx;
+}

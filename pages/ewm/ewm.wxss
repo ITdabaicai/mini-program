@@ -1,0 +1,50 @@
+/* pages/ewm/ewm.wxss */
+page{
+   background: #0b1856;
+}
+.bigview{
+   position: relative;
+}
+.ewmview{
+  position: absolute;
+  top: 150rpx;
+  left:85rpx;
+  background: #fff;
+  width: 580rpx;
+  height: 800rpx;
+}
+.ewmimg{
+  position: absolute;
+  top: 30rpx;
+  left:40rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 120rpx;
+}
+.ewmimg image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 120rpx;
+}
+.ewmname{
+  position: absolute;
+  top: 75rpx;
+  left:180rpx;
+}
+.ewm{
+  background: gray;
+  position: absolute;
+  top: 190rpx;
+  left:40rpx;
+  width: 500rpx;
+  height: 500rpx;
+}
+.ewmtext{
+  position: absolute;
+  bottom: 40rpx;
+  left:40rpx;
+  width: 500rpx;
+  text-align: center;
+  color:#666666;
+  font-size: 24rpx;
+}

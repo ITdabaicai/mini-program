@@ -1,0 +1,21 @@
+/* pages/component/myselfbar/myselfbar.wxss */
+.bar{
+  height: 160rpx;
+  width: 100%;
+  background-color: #0B1856;
+  z-index: 999;
+  position: fixed;
+  top:0;
+  
+}
+.bartitle{
+  color:#ffffff;
+  width:200rpx;
+  position: relative;
+  top:70rpx;
+  left:50%;
+  font-size: 35rpx;
+  margin-left: -100rpx;
+  text-align: center;
+  display: inline-block;
+}

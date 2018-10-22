@@ -1,0 +1,15 @@
+<!--pages/baodan/baodan.wxml-->
+<view class='bk'>
+  <view class='lefttriangle'></view>
+  <view class='righttriangle'></view>
+</view>
+
+<view class='handleform' bindtap='gohandle'>
+  <image src='/pages/icon/form_pending.png' style='width:200rpx;height:200rpx;'></image>
+  <text>处理报单</text> 
+</view>
+<view class='publicform' bindtap='gopublic'>
+    <image src='/pages/icon/form_publish.png' style='width:200rpx;height:200rpx;'></image>
+  <text>发布订单</text> 
+ 
+</view>

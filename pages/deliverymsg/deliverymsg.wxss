@@ -1,0 +1,34 @@
+/* pages/deliverymsg/deliverymsg.wxss */
+
+.cptype{
+  height: 110rpx;
+  padding-left:30rpx;
+  font-size: 30rpx;
+  line-height: 110rpx;
+  background: #fff;
+  position: relative;
+}
+.line{
+  width: 92%;
+  height: 1px;
+  background: #b1b5c7;
+  position: absolute;
+  bottom:0rpx; 
+
+}
+.sub{
+  margin-top:60rpx;
+}
+.loginbtn{
+  width: 92%;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #00ce9f;
+  color: #fff;
+  font-size: 32rpx;
+}
+.list_more{
+  position: absolute;
+  top: 40rpx;
+  right: 30rpx;
+}

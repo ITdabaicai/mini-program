@@ -1,0 +1,71 @@
+/* pages/component/bar/bar.wxss */
+/* bar */
+.bar{
+  height: 160rpx;
+  background: #0B1856;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.select_box{
+  width: 100%;
+  margin: 0 auto ; 
+  position: relative;
+  top: 80rpx;
+}
+.select{
+  box-sizing: border-box;
+  display: flex;
+  text-align: center;
+  padding: 0 20rpx;
+  color: #ffffff;
+}
+.select_text{
+  font-size: 30rpx;
+  flex: 1;
+}
+.select_img{
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: middle
+}
+.rselect_img{
+   width: 20rpx;
+  height: 20rpx;
+  vertical-align: middle;
+  transform:rotate(180deg);
+  -ms-transform:rotate(180deg); 	/* IE 9 */
+  -moz-transform:rotate(180deg); 	/* Firefox */
+  -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+  -o-transform:rotate(180deg); 	/* Opera */
+}
+.option_box{
+  position: absolute;
+  top: 80rpx;
+  width: 100%;
+  box-sizing: border-box;
+  height: 0;
+  overflow-y: hidden;
+  border-top: 0;
+  background: #fff;
+  transition: height 0.3s;
+}
+.option{
+  display: block;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #efefef;
+  text-align: center
+}
+.box{
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width:100%;
+  z-index: 998;
+}
